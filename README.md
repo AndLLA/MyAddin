@@ -1,0 +1,2 @@
+# MyAddin
+OpenOffice Calc Addin
