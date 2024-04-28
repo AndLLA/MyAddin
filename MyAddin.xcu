@@ -12,7 +12,7 @@
           <node oor:name="Parameters"> 
             <node oor:name="num" oor:op="replace">
               <prop oor:name="DisplayName"><value xml:lang="en">num</value></prop>
-              <prop oor:name="Description"><value xml:lang="en">Just a number to trigger recalc</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">Just a number to trigger re-calculation</value></prop>
             </node>
           </node>
         </node>
@@ -25,7 +25,7 @@
           <node oor:name="Parameters"> 
             <node oor:name="num" oor:op="replace">
               <prop oor:name="DisplayName"><value xml:lang="en">num</value></prop>
-              <prop oor:name="Description"><value xml:lang="en">Just a number to trigger recalc</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">Just a number to trigger re-calculation</value></prop>
             </node>
           </node>
         </node>        
@@ -172,6 +172,31 @@
           </node>
         </node>        
         
+        <node oor:name="myWebCsvClear" oor:op="replace">
+          <prop oor:name="DisplayName"><value xml:lang="en">myWebCsvClear</value></prop>
+          <prop oor:name="CompatibilityName"><value xml:lang="en">myWebCsvClear</value></prop>
+          <prop oor:name="Description"><value xml:lang="en">Clear the myWebCsv cache</value></prop>
+          <prop oor:name="Category"><value>Add-In</value></prop>
+          <node oor:name="Parameters"> 
+            <node oor:name="num" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">num</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">Just a number to trigger the re-calculation</value></prop>
+            </node>
+          </node>
+        </node>
+        
+        <node oor:name="myWebCsvList" oor:op="replace">
+          <prop oor:name="DisplayName"><value xml:lang="en">myWebCsvList</value></prop>
+          <prop oor:name="CompatibilityName"><value xml:lang="en">myWebCsvList</value></prop>
+          <prop oor:name="Description"><value xml:lang="en">List the keys (URLs) in the myWebCsv cache</value></prop>
+          <prop oor:name="Category"><value>Add-In</value></prop>
+          <node oor:name="Parameters"> 
+            <node oor:name="num" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">num</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">Just a number to trigger the re-calculation</value></prop>
+            </node>
+          </node>
+        </node>
         
       </node>
     </node>

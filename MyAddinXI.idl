@@ -44,5 +44,9 @@ module com { module andlla { module calc { module MyAddin {
         
         sequence< sequence< any > >  myWebCsv([in] string url);
         
+        sequence< sequence< any > > myWebCsvList([in] double num);
+        
+        string myWebCsvClear([in] double num);
+        
     };
 }; }; }; };

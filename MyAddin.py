@@ -20,6 +20,7 @@ class MyAddinImpl(unohelper.Base, MyAddinXI):
 	def __init__(self, ctx):
 		self.ctx = ctx
 		self.debug = False
+		self.appendToArrayLen1 = True
 
 	def myPython( self, *args ):
 		return sys.version + " " + str(datetime.datetime.now())
@@ -69,7 +70,7 @@ class MyAddinImpl(unohelper.Base, MyAddinXI):
 			if len(retAns) == 0:
 				retAns = ((ERR_NA,),)
 
-			if len(retAns) == 1:
+			if len(retAns) == 1 and self.appendToArrayLen1:
 				retAns = (*retAns, (ERR_NA,))
 
 			if self.debug:
@@ -99,7 +100,7 @@ class MyAddinImpl(unohelper.Base, MyAddinXI):
 			if len(retAns) == 0:
 				retAns = ((ERR_NA,),)
 
-			if (len(retAns) == 1):
+			if (len(retAns) == 1) and self.appendToArrayLen1:
 				retAns = (*retAns, (ERR_NA,))
 
 			if self.debug:
@@ -272,6 +273,25 @@ class MyAddinImpl(unohelper.Base, MyAddinXI):
 			if self.debug: return ((myErr,),)
 
 
+
+	def myWebCsvClear(self, url):
+		self.myWebCsvCache = dict()
+		return "myWebCsv Cache Cleared: " + str(datetime.datetime.now())
+
+	def myWebCsvList(self, url):
+		try:
+			retVal = tuple( (str(it),) for it in self.myWebCsvCache.keys() )
+			if (len(retVal) == 1) and self.appendToArrayLen1:
+				retVal = (*retVal, (ERR_NA,))
+
+			if self.debug:
+				print(str(retVal))
+
+			return retVal
+		except Exception as error:
+			myErr = traceback.format_exc()
+			print(myErr)
+			if self.debug: return ((myErr,),)
 
 
 def createInstance(ctx):
