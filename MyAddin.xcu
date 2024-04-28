@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oor:component-data xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" oor:name="CalcAddIns" oor:package="org.openoffice.Office">
+  <node oor:name="AddInInfo">
+    <node oor:name="com.andlla.calc.MyAddin.python.MyAddinImpl" oor:op="replace">
+      <node oor:name="AddInFunctions">
+      
+        <node oor:name="myPython" oor:op="replace">
+          <prop oor:name="DisplayName"><value xml:lang="en">myPython</value></prop>
+          <prop oor:name="CompatibilityName"><value xml:lang="en">myPython</value></prop>
+          <prop oor:name="Description"><value xml:lang="en">Get Current Python version</value></prop>
+          <prop oor:name="Category"><value>Add-In</value></prop>
+          <node oor:name="Parameters"> 
+            <node oor:name="num" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">num</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">Just a number to trigger recalc</value></prop>
+            </node>
+          </node>
+        </node>
+        
+        <node oor:name="myPythonModules" oor:op="replace">
+          <prop oor:name="DisplayName"><value xml:lang="en">myPythonModules</value></prop>
+          <prop oor:name="CompatibilityName"><value xml:lang="en">myPythonModules</value></prop>
+          <prop oor:name="Description"><value xml:lang="en">Get Current Python modules</value></prop>
+          <prop oor:name="Category"><value>Add-In</value></prop>
+          <node oor:name="Parameters"> 
+            <node oor:name="num" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">num</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">Just a number to trigger recalc</value></prop>
+            </node>
+          </node>
+        </node>        
+        
+        
+        <node oor:name="myDebug" oor:op="replace">
+          <prop oor:name="DisplayName"><value xml:lang="en">myDebug</value></prop>
+          <prop oor:name="CompatibilityName"><value xml:lang="en">myDebug</value></prop>
+          <prop oor:name="Description"><value xml:lang="en">Enable or Disable Console output</value></prop>
+          <prop oor:name="Category"><value>Add-In</value></prop>
+          <node oor:name="Parameters"> 
+            <node oor:name="isDebug" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">isDebug</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">Set to 1 or 0</value></prop>
+            </node>
+          </node>
+        </node>
+        
+        
+        <node oor:name="mySort" oor:op="replace">
+          <prop oor:name="DisplayName"><value xml:lang="en">mySort</value></prop>
+          <prop oor:name="CompatibilityName"><value xml:lang="en">mySort</value></prop>
+          <prop oor:name="Description"><value xml:lang="en">Sorts an array.</value></prop>
+          <prop oor:name="Category"><value>Add-In</value></prop>
+          <node oor:name="Parameters">
+            <node oor:name="sortArray" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">Sort Array</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">The array to sort.</value></prop>
+            </node>
+            <node oor:name="sortIndex" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">[Sort index]</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">A number indicating the row or column to sort by.</value></prop>
+            </node>
+            <node oor:name="sortOrder" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">[Sort order]</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">A number indicating the desired sort order; 1 for ascending order (default), -1 for descending order.</value></prop>
+            </node>
+          </node>
+        </node>
+        
+        
+        <node oor:name="myInterp" oor:op="replace">
+          <prop oor:name="DisplayName"><value xml:lang="en">myInterp</value></prop>
+          <prop oor:name="CompatibilityName"><value xml:lang="en">myInterp</value></prop>
+          <prop oor:name="Description"><value xml:lang="en">Linear interpolation with flat extrapolation. Values are sorted by X</value></prop>
+          <prop oor:name="Category"><value>Add-In</value></prop>
+          <node oor:name="Parameters">
+            <node oor:name="arrayX" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">X</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">Array of x values</value></prop>
+            </node>
+            <node oor:name="arrayY" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">Y</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">Array of y values</value></prop>
+            </node>
+            <node oor:name="interpX" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">New X</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">X to interpolate y = f(x)</value></prop>
+            </node>            
+          </node>
+        </node>
+
+
+        <node oor:name="myFilter" oor:op="replace">
+          <prop oor:name="DisplayName"><value xml:lang="en">myFilter</value></prop>
+          <prop oor:name="CompatibilityName"><value xml:lang="en">myFilter</value></prop>
+          <prop oor:name="Description"><value xml:lang="en">Filters an array</value></prop>
+          <prop oor:name="Category"><value>Add-In</value></prop>
+          <node oor:name="Parameters">
+            <node oor:name="array" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">Array</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">The array to filter.</value></prop>
+            </node>
+            <node oor:name="include" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">Include</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">An array of booleans where TRUE represents a row or column to retain.</value></prop>
+            </node>
+          </node>
+        </node>
+        
+        
+        <node oor:name="myTextSplit" oor:op="replace">
+          <prop oor:name="DisplayName"><value xml:lang="en">myTextSplit</value></prop>
+          <prop oor:name="CompatibilityName"><value xml:lang="en">myTextSplit</value></prop>
+          <prop oor:name="Description"><value xml:lang="en">Splits text into an array, using the provided separator</value></prop>
+          <prop oor:name="Category"><value>Add-In</value></prop>
+          <node oor:name="Parameters">
+            <node oor:name="text" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">Text</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">The text you want to split</value></prop>
+            </node>
+            <node oor:name="delimiter" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">Delimiter</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">The string that marks the point where to split the text</value></prop>
+            </node>
+          </node>
+        </node>
+        
+        <node oor:name="myUnique" oor:op="replace">
+          <prop oor:name="DisplayName"><value xml:lang="en">myUnique</value></prop>
+          <prop oor:name="CompatibilityName"><value xml:lang="en">myUnique</value></prop>
+          <prop oor:name="Description"><value xml:lang="en">Returns the unique values from an array</value></prop>
+          <prop oor:name="Category"><value>Add-In</value></prop>
+          <node oor:name="Parameters">
+            <node oor:name="array" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">Array</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">The array from which to return unique elements</value></prop>
+            </node>
+          </node>
+        </node>
+        
+        
+        <node oor:name="myXLookup" oor:op="replace">
+          <prop oor:name="DisplayName"><value xml:lang="en">myXLookup</value></prop>
+          <prop oor:name="CompatibilityName"><value xml:lang="en">myXLookup</value></prop>
+          <prop oor:name="Description"><value xml:lang="en">Searches an array for a match and returns the corresponding item from a second array</value></prop>
+          <prop oor:name="Category"><value>Add-In</value></prop>
+          <node oor:name="Parameters">
+            <node oor:name="lookupArray" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">Lookup array</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">The array to search</value></prop>
+            </node>
+            <node oor:name="lookupValue" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">Lookup value</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">The value to search for</value></prop>
+            </node>
+            <node oor:name="returnArray" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">Return array</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">The array to return</value></prop>
+            </node>
+          </node>
+        </node>
+        
+        <node oor:name="myWebCsv" oor:op="replace">
+          <prop oor:name="DisplayName"><value xml:lang="en">myWebCsv</value></prop>
+          <prop oor:name="CompatibilityName"><value xml:lang="en">myWebCsv</value></prop>
+          <prop oor:name="Description"><value xml:lang="en">Get a CSV from the web</value></prop>
+          <prop oor:name="Category"><value>Add-In</value></prop>
+          <node oor:name="Parameters"> 
+            <node oor:name="url" oor:op="replace">
+              <prop oor:name="DisplayName"><value xml:lang="en">url</value></prop>
+              <prop oor:name="Description"><value xml:lang="en">The source web URL</value></prop>
+            </node>
+          </node>
+        </node>        
+        
+        
+      </node>
+    </node>
+  </node>
+</oor:component-data>
+

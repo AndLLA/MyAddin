@@ -1,0 +1,48 @@
+#include <com/sun/star/beans/XPropertySet.idl>
+#include <com/sun/star/table/XCellRange.idl>
+#include <com/sun/star/uno/XInterface.idl>
+
+module com { module andlla { module calc { module MyAddin {
+    interface MyAddinXI : com::sun::star::uno::XInterface {
+        
+        string myPython([in] double num);
+        
+        sequence< sequence< any > > myPythonModules([in] double num);
+        
+        string myDebug([in] long isDebug);
+        
+        sequence< sequence< any > > mySort(
+            [in] sequence< sequence< any > > sortArray,
+            [in] any sortIndex,
+            [in] any sortOrder
+        );
+        
+        double myInterp(
+	     [in] sequence< sequence< double > > arrayX, 
+	     [in] sequence< sequence< double > > arrayY, 
+	     [in] double interpX);        
+
+        sequence< sequence< any > > myFilter(
+            [in] sequence< sequence< any > > array,
+            [in] sequence< sequence< any > > include
+        );
+                
+        sequence< sequence< any > > myTextSplit(
+            [in] string text,
+            [in] string delimiter
+        );
+        
+        sequence< sequence< any > > myUnique(
+            [in] sequence< sequence< any > > array
+        );
+        
+        sequence< sequence< any > > myXLookup(
+            [in] sequence< sequence< any > > lookupArray,
+            [in] any lookupValue,
+            [in] sequence< sequence< any > > returnArray
+        );
+        
+        sequence< sequence< any > >  myWebCsv([in] string url);
+        
+    };
+}; }; }; };
