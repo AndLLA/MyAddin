@@ -144,6 +144,12 @@ class MyAddinImpl(unohelper.Base, MyAddinXI):
 				print("sortIndex: " + str(sortIndex))
 				print("sortArray: " + str(sortArray))
 
+			if sortIndex == None:
+				sortIndex = 1
+
+			if sortOrder == None:
+				sortOrder = 1
+
 			sortIndex = int(sortIndex)
 			sortOrder = int(sortOrder)
 
